@@ -1,0 +1,74 @@
+body {
+  margin: 0 auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  background-color: rgb(0, 0, 80);
+  color: white;
+}
+
+header {
+  padding: 5rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-family: cursive;
+  font-size: 5rem;
+}
+
+#main {
+  border-color: rgb(255, 0, 98);
+  border-width: 5px;
+  border-style: dotted;
+  max-width: 80%;
+  margin: 0 auto 5rem auto;
+}
+
+.image-container {
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cat-container,
+.dog-container {
+  max-height: 400px;
+  max-width: 350px;
+  height: auto;
+  width: auto;
+  align-self: center;
+  border-color: chartreuse;
+  border-width: 5px;
+  border-style: double;
+  overflow: hidden;
+}
+
+.vs-container {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 0.3rem 0.8rem;
+  background-color: greenyellow;
+  border-width: 0;
+  margin: 5%;
+}
+
+button:hover {
+  background-color: aqua;
+}
