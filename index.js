@@ -6,14 +6,6 @@ const catContainer = document.querySelector(".cat-container");
 const dogContainer = document.querySelector(".dog-container");
 const catButton = document.querySelector(".cat-button");
 const dogButton = document.querySelector(".dog-button");
-const rounds = 10;
-let score = 0;
-
-// display random cat and dog images
-// add event listener to cat and dog button
-// if cat button is pressed, count at 1 to count
-// create counter function
-// create winner display function
 
 // Cat Generator
 const displayCat = async () => {
@@ -34,7 +26,7 @@ const displayCat = async () => {
 const getCat = (cat) => {
   const photo = cat.url; // Access the URL property from the cat object
   catContainer.classList.add("cats");
-
+  
   const image = document.createElement("img");
   image.src = photo;
   image.classList.add("random_cats");
@@ -61,7 +53,7 @@ const displayDog = async () => {
 const getDog = (dog) => {
   const photo = dog.url; // Access the URL property from the cat object
   dogContainer.classList.add("dogs");
-
+  
   const image = document.createElement("img");
   image.src = photo;
   image.classList.add("random_dogs");
@@ -72,6 +64,14 @@ const getDog = (dog) => {
 displayCat();
 displayDog();
 
+// Scoring function
+
+const totalRounds = 5;
+let round = 0;
+let catScore = 0;
+let dogScore = 0;
+
+
 const resetImages = () => {
   catContainer.innerHTML = "";
   dogContainer.innerHTML = "";
@@ -81,9 +81,40 @@ catButton.addEventListener("click", async () => {
   resetImages();
   await displayCat();
   await displayDog();
+  catScore++;
+  round++;
+  checkScore();
 });
 dogButton.addEventListener("click", async () => {
   resetImages();
   await displayCat();
   await displayDog();
+  dogScore++;
+  round++;
+  checkScore();
 });
+
+function checkScore() { 
+  if (round === totalRounds) {
+    if (catScore > dogScore) {
+      alert(`Cats Win! Cats: ${catScore}, Dogs: ${dogScore}`);
+    } else if (dogScore > catScore) {
+      alert(`Dogs Win! Dogs: ${dogScore}, Cats: ${catScore}`);
+    } else {
+      alert(`Its a Tie! Cats: ${catScore}, Dogs: ${dogScore}`);
+    }
+    round = 0;
+    catScore = 0;
+    dogScore = 0;
+  }
+}
+
+
+
+
+
+// display random cat and dog images
+// add event listener to cat and dog button
+// if cat button is pressed, count at 1 to count
+// create counter function
+// create winner display function
