@@ -26,7 +26,7 @@ const displayCat = async () => {
 const getCat = (cat) => {
   const photo = cat.url; // Access the URL property from the cat object
   catContainer.classList.add("cats");
-  
+
   const image = document.createElement("img");
   image.src = photo;
   image.classList.add("random_cats");
@@ -53,7 +53,7 @@ const displayDog = async () => {
 const getDog = (dog) => {
   const photo = dog.url; // Access the URL property from the cat object
   dogContainer.classList.add("dogs");
-  
+
   const image = document.createElement("img");
   image.src = photo;
   image.classList.add("random_dogs");
@@ -70,7 +70,6 @@ const totalRounds = 5;
 let round = 0;
 let catScore = 0;
 let dogScore = 0;
-
 
 const resetImages = () => {
   catContainer.innerHTML = "";
@@ -109,12 +108,3 @@ function checkScore() {
   }
 }
 
-
-
-
-
-// display random cat and dog images
-// add event listener to cat and dog button
-// if cat button is pressed, count at 1 to count
-// create counter function
-// create winner display function
