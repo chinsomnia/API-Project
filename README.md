@@ -12,7 +12,7 @@ Millions of cats and dogs compete for your love! Choose the photo that is more c
 
 - Fetches random images of cats and dogs from an API
 - Allows users to vote for their favorite image
-- Displays the winning image
+- Displays the winning team and total score
 - Provides a fun and interactive user experience
 
 ## Technologies Used
@@ -51,7 +51,7 @@ To view and explore this project locally, follow these steps:
 1. The website fetches random images of cats and dogs from the API.
 2. Two images are displayed side by side.
 3. Users click on the image they prefer.
-4. The chosen image is highlighted as the winner.
+4. The click is counted as a score.
 5. A new set of images is fetched for the next round.
 
 ## API Reference
