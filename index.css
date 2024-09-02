@@ -2,8 +2,8 @@ body {
   margin: 0 auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
-  background-color: rgb(0, 0, 80);
-  color: white;
+  background-color: #9fb9f3;
+  color: rgb(70, 70, 71);
 }
 
 header {
@@ -16,19 +16,20 @@ h3,
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  padding: 0 75px;
 }
 
 h1 {
-  font-family: cursive;
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 #main {
-  border-color: rgb(255, 0, 98);
-  border-width: 5px;
-  border-style: dotted;
-  max-width: 80%;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 1250px;
   margin: 0 auto 3rem auto;
+  background-color: #ffefb3;
+  box-shadow: 12px 12px 2px 1px rgba(58, 73, 92, 0.2);
 }
 
 .image-container {
@@ -45,9 +46,7 @@ h1 {
   height: auto;
   width: auto;
   align-self: center;
-  border-color: chartreuse;
-  border-width: 5px;
-  border-style: double;
+  border-radius: 15px;
   overflow: hidden;
 }
 
@@ -64,14 +63,15 @@ img {
 
 button {
   font-size: 1.5rem;
-  padding: 0.3rem 0.8rem;
-  background-color: greenyellow;
-  border-width: 0;
+  padding: 0.8rem 1.5rem;
+  background-color: #ffb6ed;
+  border-radius: 8px;
   margin: 30px;
+  border: 2px solid #f395dc;
 }
 
 button:hover {
-  background-color: aqua;
+  background-color: #a4dcff;
 }
 
 @media screen and (max-width: 1100px) {
